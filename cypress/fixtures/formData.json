@@ -1,0 +1,21 @@
+{
+  "valid": {
+    "firstName": "Esteban",
+    "lastName": "QA",
+    "email": "esteban.qa@mail.com",
+    "gender": "Male",
+    "mobile": "3001234567",
+    "birthDate": "1996-10-15",
+    "subjects": ["Maths", "Computer Science"],
+    "hobbies": ["Sports", "Reading"],
+    "picture": "sample.jpg",
+    "address": "Calle 123 #45-67",
+    "state": "NCR",
+    "city": "Delhi"
+  },
+
+  "invalid": {
+    "email": "correo_invalido",
+    "mobileShort": "12345"
+  }
+}
