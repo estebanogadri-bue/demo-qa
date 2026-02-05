@@ -66,35 +66,39 @@ Incluye:
 
 ## Estructura del Proyecto
 
+```text
 demo-qa/
 ├─ cypress/
-│ ├─ e2e/
-│ │ ├─ smoke/
-│ │ │ └─ form-smoke.cy.js
-│ │ └─ regression/
-│ │ └─ form-e2e.cy.js
-│ ├─ fixtures/
-│ │ ├─ formData.json
-│ │ └─ sample.jpg
-│ ├─ pages/
-│ │ ├─ FormPage.js
-│ │ └─ ConfirmationModal.js
-│ └─ support/
-│ ├─ commands.js
-│ └─ e2e.js
+│  ├─ e2e/
+│  │  ├─ smoke/
+│  │  │  └─ form-smoke.cy.js
+│  │  └─ regression/
+│  │     └─ form-e2e.cy.js
+│  ├─ fixtures/
+│  │  ├─ formData.json
+│  │  └─ sample.jpg
+│  ├─ pages/
+│  │  ├─ FormPage.js
+│  │  └─ ConfirmationModal.js
+│  └─ support/
+│     ├─ commands.js
+│     └─ e2e.js
+├─ .gitignore
 ├─ cypress.config.js
 ├─ package.json
-├─ .gitignore
+├─ package-lock.json
 └─ README.md
+```
+
 
 ---
 
 ## Autor
 
-Esteban Ogadri
-QA Analyst | QA Automation
-estebanogadri@gmail.com
+- **Esteban Ogadri**
+- **QA Analyst | QA Automation**
+- estebanogadri@gmail.com
 
-Proyecto desarrollado como parte de un plan de crecimiento profesional hacia QA Automation / SDET, con foco en calidad, riesgo y producto.
+Proyecto desarrollado como parte de un plan de crecimiento profesional hacia **QA Automation / SDET**, con foco en **calidad, riesgo y producto**.
 
 Siempre abierto a feedback técnico y mejora continua.
