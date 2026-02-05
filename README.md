@@ -1,31 +1,66 @@
 # Cypress E2E Automation – DemoQA Form
 
-Proyecto de **QA Automation E2E** desarrollado con **Cypress**, enfocado en buenas prácticas de testing, priorización por riesgo y validación de flujos críticos de negocio.
+Framework de **QA Automation E2E** desarrollado con **Cypress**, orientado a **calidad con foco en negocio**, priorización por riesgo y validación de flujos críticos.
 
-El objetivo no es “automatizar por automatizar”, sino **detectar defectos que generen impacto real en la experiencia del usuario**.
+> El objetivo no es “automatizar por automatizar”, sino **detectar defectos que impactan en la experiencia del usuario y en la confiabilidad del producto**.
 
 ---
 
-## Alcance del Proyecto
+## Objetivo del Proyecto
 
-El proyecto automatiza el formulario **DemoQA – Practice Form**, cubriendo:
+Automatizar el formulario **DemoQA – Practice Form** aplicando buenas prácticas reales de QA Automation:
 
-- Smoke tests (validación rápida de disponibilidad y reglas críticas)
-- Regression E2E (flujo completo de envío de formulario)
-- Validaciones positivas y negativas
+- Priorización por riesgo
+- Separación clara entre lógica de test y UI
+- Tests estables, mantenibles y escalables
+- Diseño preparado para CI/CD
+
+---
+
+## Alcance de Testing
+
+### Smoke Tests
+Validaciones rápidas para asegurar que la aplicación:
+
+- Carga correctamente
+- Bloquea el submit con campos obligatorios vacíos
+- Aplica validaciones HTML5 nativas
+
+> Pensados para ejecución rápida en pipelines CI/CD.
+
+### Regression E2E
+Validación del flujo completo de negocio:
+
+- Completar el formulario con datos válidos
+- Enviar el formulario
+- Verificar el resumen final en el modal de confirmación
+
+Incluye:
+- Casos positivos y negativos
 - Manejo de componentes complejos (React Select, DatePicker, Upload)
-- Validaciones HTML5 nativas
+
+---
+
+## Arquitectura y Buenas Prácticas
+
+- **Page Object Model (POM)** para desacoplar UI de la lógica de test
+- **Fixtures** para evitar hardcodeo de datos
+- **Custom Commands** para acciones reutilizables
+- Selectores estables y semánticos
+- Evitar `force: true` salvo casos justificados
+- Aserciones orientadas a comportamiento, no a estilos
 
 ---
 
 ## Stack Tecnológico
 
-- **Cypress**
-- **JavaScript**
-- **Page Object Model (POM)**
-- **Fixtures para datos de prueba**
-- **Custom Commands**
-- **Validaciones de negocio (UI + HTML5)**
+- Cypress
+- JavaScript
+- E2E Testing
+- Page Object Model (POM)
+- Fixtures & Custom Commands
+- HTML5 Validations
+- Git
 
 ---
 
@@ -33,67 +68,33 @@ El proyecto automatiza el formulario **DemoQA – Practice Form**, cubriendo:
 
 demo-qa/
 ├─ cypress/
-│  ├─ e2e/
-│  │  ├─ regression/
-│  │  │  └─ form-e2e.cy.js
-│  │  └─ smoke/
-│  │     └─ form-smoke.cy.js
-│  ├─ fixtures/
-│  │  ├─ formData.json
-│  │  └─ sample.jpg
-│  ├─ pages/
-│  │  ├─ ConfirmationModal.js
-│  │  └─ FormPage.js
-│  └─ support/
-│     ├─ commands.js
-│     └─ e2e.js
-├─ node_modules/
-├─ .gitignore
+│ ├─ e2e/
+│ │ ├─ smoke/
+│ │ │ └─ form-smoke.cy.js
+│ │ └─ regression/
+│ │ └─ form-e2e.cy.js
+│ ├─ fixtures/
+│ │ ├─ formData.json
+│ │ └─ sample.jpg
+│ ├─ pages/
+│ │ ├─ FormPage.js
+│ │ └─ ConfirmationModal.js
+│ └─ support/
+│ ├─ commands.js
+│ └─ e2e.js
 ├─ cypress.config.js
-├─ package-lock.json
 ├─ package.json
+├─ .gitignore
 └─ README.md
 
-
 ---
 
-Estrategia de Testing
-
-Smoke Tests
--Validan que la aplicación:
--Carga correctamente
--Bloquea el submit con campos obligatorios vacíos
--Aplica validaciones HTML5
-
-Se ejecutan rápido y son ideales para CI/CD.
-
-Regression E2E
--Valida el flujo completo:
--Completar formulario con datos válidos
--Enviar el formulario
-
-Verificar el resumen en el modal final
-
----
-
-Buenas Prácticas Aplicadas
-
-Separación clara entre test logic y UI selectors
-Reutilización mediante Page Object Model
-Uso de fixtures para evitar hardcodeo
-Evitar force: true salvo en casos justificados
-Validaciones estables (sin depender de foco, colores o CSS)
-
----
-
-Proyecto desarrollado como parte de un plan de crecimiento profesional en QA Automation / SDET, con foco en calidad, riesgo y producto.
-
-Siempre abierto a feedback técnico y mejora continua.
-
----
-
-Autor
+## Autor
 
 Esteban Ogadri
+QA Analyst | QA Automation
 estebanogadri@gmail.com
-QA Analyst - QA Automation
+
+Proyecto desarrollado como parte de un plan de crecimiento profesional hacia QA Automation / SDET, con foco en calidad, riesgo y producto.
+
+Siempre abierto a feedback técnico y mejora continua.
